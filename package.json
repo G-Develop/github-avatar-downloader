@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/G-Develop/github-avatar-downloader#readme",
   "dependencies": {
-    "reqeust": "^2.81.1"
+    "reqeust": "^2.81.1",
+    "request": "^2.88.0"
   }
 }
