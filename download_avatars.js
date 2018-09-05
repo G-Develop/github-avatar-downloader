@@ -33,7 +33,7 @@ function downloadImageByURL(url, filePath) {
 
 }
 
-downloadImageByURL('https://avatars3.githubusercontent.com/u/192451?v=4', './avatar.jpg')
+//downloadImageByURL('https://avatars3.githubusercontent.com/u/192451?v=4', './avatar.jpg')
 
 
 getRepoContributors(process.argv[02], process.argv[03], function(err, result) {
