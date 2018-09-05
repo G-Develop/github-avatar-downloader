@@ -1,4 +1,5 @@
 var request = require('request');
+var fs = require('fs');
 
 function getRepoContributors(repoOwner, repoName, cb) {
   var options = {
@@ -21,6 +22,14 @@ function getRepoContributors(repoOwner, repoName, cb) {
 
   });
 }
+
+function downloadImageByURL(url, filePath) {
+  request.get(url)
+  .pipe(fs.createWriteStream(filePath));
+
+}
+
+downloadImageByURL('https://avatars3.githubusercontent.com/u/192451?v=4', './avatar.jpg')
 
 
 getRepoContributors("jquery", "jquery", function(err, result) {
