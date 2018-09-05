@@ -36,7 +36,14 @@ function downloadImageByURL(url, filePath) {
 downloadImageByURL('https://avatars3.githubusercontent.com/u/192451?v=4', './avatar.jpg')
 
 
-getRepoContributors("jquery", "jquery", function(err, result) {
+getRepoContributors(process.argv[02], process.argv[03], function(err, result) {
+  console.log(process.argv)
   console.log("Errors:", err);
   console.log("Result:", result);
 });
+
+
+// getRepoContributors1("jquery", "jquery", function(err, result) {
+//   console.log("Errors:", err);
+//   console.log("Result:", result);
+// });
