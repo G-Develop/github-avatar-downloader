@@ -14,8 +14,12 @@ function getRepoContributors(repoOwner, repoName, cb) {
     let parsedJson = JSON.parse(body);
     let arr = [];
     parsedJson.forEach(object => {
-      arr.push(object.avatar_url);
-    })
+      let imgUrl = object.avatar_url;
+      let loginKey = object.login;
+      let filePath = `./avatars/${loginKey}.jpg`
+      downloadImageByURL(imgUrl, filePath);
+    });
+
 
     cb(err, arr);
     // console.log (parsedJson);
